@@ -21,6 +21,11 @@ struct Pokemon: Codable, Identifiable, Equatable {
     let name: String
     let url: String
     
+    private enum CodingKeys: String, CodingKey {
+        case name
+        case url
+    }
+    
     static var samplePokemon = Pokemon(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/" )
 }
 
